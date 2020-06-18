@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: none;
+            overflow: hidden;
+        }
+        
+        .logo {
+            position: absolute;
+            margin-left: 30px;
+            color: chocolate;
+        }
+        
+        .header {
+            position: absolute;
+            height: 85px;
+            background-color: pink;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav a {
+            border-bottom: none;
+        }
+        
+        nav {
+            margin: 40px;
+        }
+        
+        nav a {
+            padding: 20px;
+        }
+        
+        nav a:hover {
+            color: red;
+            background: seashell;
+        }
+        
+        div img {
+            width: 85%;
+        }
+        
+        .left {
+            width: 45%;
+            float: left;
+            margin-left: 20px;
+            text-align: center;
+        }
+        
+        .right {
+            width: 45%;
+            float: right;
+            margin-right: 20px;
+            text-align: center;
+        }
+        
+        p {
+            font-size: 24px;
+        }
+        
+        @media screen and (max-width:768px) {
+            .btn {
+                width: 60px;
+                height: 75px;
+                background-color: pink;
+                display: block;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+            .btn::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 2px;
+                width: 36px;
+                background-color: #aaa;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+            }
+            nav a {
+                display: block;
+                text-decoration: none;
+                color: #a6e22e;
+                padding: 10px 20px;
+                border-bottom: 1px solid #a6e22e;
+            }
+            nav {
+                width: 40%;
+                height: 100vh;
+                background-color: pink;
+                position: absolute;
+                top: 50px;
+                left: -100%;
+            }
+            #menu:checked~.header nav {
+                left: -10%;
+            }
+            .left,
+            .right {
+                margin: 20px;
+                float: none;
+                width: 85%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu">
+    <div class="header">
+        <h1 class="logo">楓之谷介紹</h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="https://www.instagram.com/wei_jun_10_02/?hl=zh-tw " target="_blank ">關於作者</a> </li>
+            <a href=" ">下載遊戲</a>
+            <a href=" ">ASDAS</a>
+        </nav>
+
+    </div>
+
+    <div class="left">
+        <img src="一起打王.jpg">
+        <p> 一起打王</p>
+    </div>
+
+    <div class="right">
+        <img src="掛機閒聊.jpg">
+        <p> 掛機閒聊</p>
+    </div>
+
+    <div class="left">
+        <img src="打怪練等.jpg">
+        <p> 打怪練等</p>
+    </div>
+
+    <div class="right">
+        <img src="活動任務.jpg">
+        <p> 活動任務</p>
+    </div>
+</body>
+
+</html>
